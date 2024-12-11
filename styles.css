@@ -1,0 +1,210 @@
+/* Estilo base para el cuerpo */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Se agrega Roboto como alternativa */
+    margin: 0;
+    padding: 0;
+    background-color: #6e7dff; /* Fondo color plomo */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo para el encabezado */
+header {
+    text-align: center;
+    padding: 0px 0; /* Reduce el espacio interno */
+    background-color: #333; /* Fondo gris oscuro */
+    color: white;
+    font-size: 2.2rem;
+    font-family: 'Lobster', cursive; /* Aplica la fuente */
+    border-bottom: 4px solid #555;
+    border-radius: 10px; /* Bordes curvos */
+    margin: 10px; /* Espaciado alrededor del header */
+}
+
+/* Estilos principales */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Estilando las categorías */
+.categoria {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+.categoria h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #333;
+    font-family: 'Lobster', cursive; /* Consistencia en las fuentes */
+}
+
+/* Estilando las imágenes */
+.trabajos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.trabajos img {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.trabajos img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilando el Lightbox para ampliación de imágenes */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox.hidden {
+    display: none;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Botón base */
+button {
+    background-color: #6e7dff; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a6ce0; /* Color al pasar el mouse */
+}
+
+button:focus {
+    outline: 2px dashed #5a6ce0;
+}
+
+/* Botón flotante */
+.boton-flotante {
+    position: fixed; /* Posición fija en la pantalla */
+    right: 20px; /* Separación desde el borde derecho */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta para centrar el botón correctamente */
+    background-color: #6e7dff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-flotante:hover {
+    background-color: #5a6ce0;
+    transform: translateY(-50%) scale(1.05); /* Efecto al pasar el mouse */
+}
+
+/* Modal oculto por defecto */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-height: 90%; /* Manejo de scroll */
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+form h2 {
+    margin-top: 0;
+    font-family: 'Lobster', cursive;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-right: 10px;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    .categoria {
+        width: 100%;
+    }
+    .trabajos img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}
