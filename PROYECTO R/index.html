@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIMENCITY 3D - Impresiones Personalizadas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Impresiones 3D</h1>
+    </header>
+    <button id="btnRegistrarVenta" class="boton-flotante">Registrar Venta</button>
+    <div id="formularioVenta" class="modal hidden">
+        <form id="ventaForm">
+            <h2>Registrar Venta</h2>
+            <label for="producto">Producto:</label>
+            <input type="text" id="producto" name="producto" required>
+            
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required>
+            
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+            
+            <button type="submit">Guardar</button>
+            <button type="button" id="cerrarFormulario">Cancelar</button>
+        </form>
+    </div>
+    <main>
+        <!-- Categorías -->
+        <section class="categoria">
+            <h2>Prototipos</h2>
+            <div class="trabajos">
+                <img src="images/prototipo1.jpg" alt="Prototipo de prueba 1">
+                <img src="images/prototipo2.jpg" alt="Prototipo de prueba 2">
+            </div>
+        </section>
+        <section class="categoria">
+            <h2>Decoraciones</h2>
+            <div class="trabajos">
+                <img src="images/decoracion1.jpg" alt="Decoración para hogar 1">
+                <img src="images/decoracion2.jpg" alt="Decoración para hogar 2">
+            </div>
+        </section>
+        <section class="categoria">
+            <h2>Herramientas</h2>
+            <div class="trabajos">
+                <img src="images/herramienta1.jpg" alt="Herramienta personalizada 1">
+                <img src="images/herramienta2.jpg" alt="Herramienta personalizada 2">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 DIMENCITY 3D</p>
+    </footer>
+    <div id="lightbox" class="hidden">
+        <img id="lightbox-img" src="" alt="Vista ampliada">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
